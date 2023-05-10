@@ -1,28 +1,36 @@
 # Toy Robot Simulator
 
-## How it works:
+This application simulates a toy robot moving on a 5x5 square tabletop. It features both a command-line interface (CLI) and a web version using Sinatra.
 
-* [CLI version](./README.md#command-line-interface-(CLI))
-* [Web version](./README.md#web)
+## Installation
 
-## Command Line Interface (CLI)
-To provide input from a file, run the CLI application as follows:
-`ruby cli.rb input.txt`
+1. Clone this repository:
+`git clone git@github.com:amilhoranza/toy_robot_simulator.git`
 
-```
-PLACE X,Y,F
-MOVE
-LEFT
-RIGHT
-REPORT
-```
-Or leave the second param blank and then you would see a prompt like
-```
-Enter commands for the toy robot:
-```
+2. Change to the project directory:
+`cd toy_robot_simulator`
 
-### WEB
+3. Install the required gems:
+`bundle install`
 
-You can run the web application version using `ruby web.rb` and access it at http://localhost:4567. 
-Just add the commands in the input field and click on the "Execute" button. 
-The current robot position and direction will be displayed when the "REPORT" command is entered.
+## Usage
+
+### Command-line Interface (CLI)
+
+1. Run the CLI application:
+`ruby cli.rb input.txt` Or leave the second param blank and then you would see a prompt like `Enter commands for the toy robot:`
+
+
+### Web Version
+
+1. Start the web application:
+`ruby web.rb`
+
+2. Open your web browser and navigate to `http://localhost:4567`.
+
+3. Enter commands in the input area, separated by newlines. Click "Execute" to run the commands.
+
+## Running Tests
+
+This application uses RSpec for testing. To run the tests, execute the following command in the project root directory:
+`bundle exec rspec spec`
