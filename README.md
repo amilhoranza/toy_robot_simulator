@@ -7,7 +7,7 @@
 
 ## Command Line Interface (CLI)
 To provide input from a file, run the CLI application as follows:
-ruby cli.rb input.txt
+`ruby cli.rb input.txt`
 
 ```
 PLACE X,Y,F
