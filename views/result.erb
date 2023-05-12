@@ -1,11 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Toy Robot Simulator - Result</title>
-</head>
-<body>
-  <h1>Toy Robot Simulator - Result</h1>
-  <p>Report: <%= @report %></p>
-  <a href="/">Back</a>
-</body>
-</html>
+<h1>Toy Robot Simulator</h1>
+
+<h2>Board</h2>
+<style>
+  /* Add a border to the table and center it on the page. */
+  table {
+    border: 2px solid #333;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  /* Add a border to each cell and set their size. */
+  td {
+    border: 1px solid #333;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  /* Style the robot cells. */
+  .robot {
+    background-color: #f00;
+    color: #fff;
+  }
+</style>
+
+<table>
+  <% @board.each do |row| %>
+    <tr>
+      <% row.each do |cell| %>
+        <td><%= cell %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Report</h2>
+
+<p><%= @report ? "Report: #{@report}" : "No report." %></p>
+
+<a href="/">Go back</a>

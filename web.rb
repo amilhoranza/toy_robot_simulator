@@ -25,5 +25,11 @@ post '/execute' do
     end
   end
 
+  @board = Array.new(5) { Array.new(5, '') }
+  if @report
+    x, y, direction = @report.split(',')
+    @board[y.to_i][x.to_i] = 'ROBOT'
+  end
+
   erb :result
 end
